@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure---&(0ec=)ku=qa(difpl%-(qv(bk!78znf+&6o+e(*p2o@38fh'
+SECRET_KEY = 'django-insecure-9t(x52)k_ll665(a3)i59caqz_=6^h8duofbs+ff@0@!(gb4-%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,8 +75,10 @@ WSGI_APPLICATION = 'gisapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gisapidb',
+	'USER':'root',
+	'PASSWORD':'1234'
     }
 }
 
