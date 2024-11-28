@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from django.shortcuts import render # type: ignore
+from django.http import JsonResponse # type: ignore
 
 
 # Create your views here.
@@ -7,11 +7,11 @@ from django.http import JsonResponse
 
 def processo_car_code(request, code):
     if request.method == "GET":
-        pass
+        # PROCESSAR O CÓDIGO RECEBIDO AQUI
         if code == "ms01":
-	    reponse = {"status":"sucess", "message":"FOi!"}
+            response = {"status":"sucess", "message":"FOi!"}
         else:
-    	    reponse = {"status":"fail", "message":"Not"}
+            response = {"status":"fail", "message":"Not"}
         return JsonResponse(response)
     else:
-	return JsonResponde("status":"fail", "message":"Metodo bugado!"})
+        return JsonResponse({"status":"fail", "message":"Metodo bugado!"})
