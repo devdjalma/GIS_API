@@ -2,5 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
+from datetime import datetime
+
 def index(request):
-    return HttpResponse("Home world Atualizado em tempo real!")
+    data_hora = datetime.now().strftime("%x %X")
+    return HttpResponse(f"<h1>Home world Atualizado em tempo real! {data_hora}</h1>")
