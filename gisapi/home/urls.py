@@ -1,7 +1,6 @@
 from django.urls import path
-from . import views
+from .views import index
 
-# Padrões de URLS que o user vai navegar
 urlpatterns = [
-    path("", views.index)
+    path('', index, name='index'),
 ]
